@@ -13,7 +13,8 @@ define r = Character("Registry", color="#800080")  # Purple
 define s = Character("Serra", color="#0000FF")  # Blue
 define n = Character("Nolan", color="#8B4513")  # Brown
 define na = Character("Narration", color="#808080")  # Grey
-define l = Character("Lucia", color="#FFFF00")  # Pink
+define l = Character("Lucia", color="#FFFF00")  # Yellow. Original name Luciana, meaning illuminate in Latin, or light
+#but Klein always call her Lucia
 
 
 label start:
