@@ -1,0 +1,5 @@
+image sh = "images/serra/s_smile.png"
+image sn = "images/serra/s_neutral.png"
+image sshock = "images/serra/s_shock.png"
+image ssmile = "images/serra/s_happy.png"
+image su = "./images/serra/s_upset.png"
