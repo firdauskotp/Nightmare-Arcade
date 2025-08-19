@@ -1,0 +1,21 @@
+image lh = "images/lucia/l_happy.png"
+image ln = "images/lucia/l_neutral.png"
+image ls = "images/lucia/l_sad.png"
+image lsmile = "images/lucia/l_smile.png"
+image lu = "./images/lucia/l_upset.png"
+image lcough = "./images/lucia/l_really_sick.png"
+
+image lch = "images/lucia/l_cap_happy.png"
+image lcn = "images/lucia/l_cap_neutral.png"
+image lcs = "images/lucia/l_cap_sad.png"
+image lcsmile = "images/lucia/l_cap_smile.png"
+image lcu = "./images/lucia/l_cap_upset.png"
+image lccough = "./images/lucia/l_cap_really_sick.png"
+
+image lsh = "images/lucia/l_sick_happy.png"
+image lsn = "images/lucia/l_sick_neutral.png"
+image lss = "images/lucia/l_sick_sad.png"
+image lssmile = "images/lucia/l_sick_smile.png"
+image lsu = "./images/lucia/l_sick_upset.png"
+image lscough = "./images/lucia/l_sick_really_sick.png"
+
