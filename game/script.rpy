@@ -32,6 +32,28 @@ label start:
     label stop_music():
         stop music fadeout 3.0
 
+    label show_right(initial_character, new_character):
+        hide initial_character
+        show new_character:
+            right
+
+    label show_left(initial_character, new_character):
+        hide initial_character
+        show new_character:
+            left
+
+    label show_center(initial_character, new_character):
+        hide initial_character
+        show new_character:
+            center
+
+    label move_right(character, position):
+        show character with moveinright:
+            position
+
+    label move_left(character, position):
+        show character with moveinleft:
+            position
 
 
     scene uni with fade
