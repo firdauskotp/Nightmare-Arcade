@@ -1,4 +1,4 @@
-image uni = im.Scale("locations/university.png",1920,1080)
+image university = im.Scale("locations/university.png",1920,1080)
 image rain_uni = im.Scale("locations/rainy_university.png",1920,1080)
 image arcade = im.Scale("locations/arcade.png",1920,1080)
 image arcade_nightmare = im.Scale("locations/arcade_nightmare.png",1920,1080)

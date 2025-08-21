@@ -1,96 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing the color property of anonymous style:
-  File "game/script.rpy", line 23, in script
-    na "Universities and schools have been opened again. Most of the students are happy to be back..."
-  File "tmp/gen3-static/styleclass.pxi", line 621, in renpy.styledata.styleclass.Style.slow_abortable.__get__
-  File "renpy/style.pyx", line 493, in renpy.style.StyleCore._get
-  File "renpy/style.pyx", line 717, in renpy.style.build_style
-  File "renpy/style.pyx", line 714, in renpy.style.build_style
-  File "tmp/gen3-static/style_functions.pyx", line 336, in style_functions.color_property
-ValueError: invalid literal for int() with base 16: 'g'
+While running game code:
+  File "game/script.rpy", line 104, in script
+    show kn at right_half
+  File "game/script.rpy", line 104, in <module>
+    show kn at right_half
+NameError: name 'right_half' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
-Traceback (most recent call last):
-  File "game/script.rpy", line 23, in script
-    na "Universities and schools have been opened again. Most of the students are happy to be back..."
-  File "renpy/ast.py", line 2915, in execute
-    Say.execute(self)
-    ~~~~~~~~~~~^^^^^^
-  File "renpy/ast.py", line 991, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/exports/sayexports.py", line 129, in say
-    who(what, *args, **kwargs)
-    ~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/character.py", line 1543, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/character.py", line 1198, in do_display
-    display_say(who, what, self.do_show, **display_args)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/character.py", line 888, in display_say
-    rv = renpy.ui.interact(mouse="say", type=type, roll_forward=roll_forward)
-         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/ui.py", line 304, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 2219, in interact
-    repeat, rv = self.interact_core(
-                 ~~~~~~~~~~~~~~~~~~^
-        preloads=preloads,
-        ^^^^^^^^^^^^^^^^^^
-    ...<4 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    )  # type: ignore
-    ^                
-  File "renpy/display/core.py", line 2757, in interact_core
-    root_widget.visit_all(lambda d: d.per_interact())
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 432, in visit_all
-    d.visit_all(callback, seen)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 432, in visit_all
-    d.visit_all(callback, seen)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 432, in visit_all
-    d.visit_all(callback, seen)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/screen.py", line 508, in visit_all
-    self.child.visit_all(callback, seen=None)
-    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 432, in visit_all
-    d.visit_all(callback, seen)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 432, in visit_all
-    d.visit_all(callback, seen)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 432, in visit_all
-    d.visit_all(callback, seen)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-[Previous line repeated 1 more time]
-  File "renpy/display/displayable.py", line 434, in visit_all
-    callback(self)
-    ~~~~~~~~^^^^^^
-  File "renpy/display/core.py", line 2757, in <lambda>
-    root_widget.visit_all(lambda d: d.per_interact())
-                                    ~~~~~~~~~~~~~~^^ 
-  File "renpy/text/text.py", line 2354, in per_interact
-    if self.style.slow_abortable:
-       ^^^^^^^^^^^^^^^^^^^^^^^^^ 
-  File "tmp/gen3-static/styleclass.pxi", line 621, in renpy.styledata.styleclass.Style.slow_abortable.__get__
-  File "renpy/style.pyx", line 493, in renpy.style.StyleCore._get
-  File "renpy/style.pyx", line 717, in renpy.style.build_style
-  File "renpy/style.pyx", line 714, in renpy.style.build_style
-  File "tmp/gen3-static/style_functions.pyx", line 336, in style_functions.color_property
-  File "renpy/color.py", line 157, in __new__
-    r = int(c[0], 16) * 0x11
-        ~~~^^^^^^^^^^       
-ValueError: invalid literal for int() with base 16: 'g'
+Full traceback:
+  File "game/script.rpy", line 104, in script
+    show kn at right_half
+  File "renpy/ast.py", line 1191, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "renpy/ast.py", line 1150, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 104, in <module>
+    show kn at right_half
+NameError: name 'right_half' is not defined
 
-macOS-10.16-x86_64-i386-64bit x86_64
-Ren'Py 8.4.1.25072401
+Windows-10-10.0.19041
+Ren'Py 7.4.4.1439
 Arcade Nightmare 1.0
-Sat Aug  9 22:04:53 2025
+Thu Aug 21 15:30:28 2025
