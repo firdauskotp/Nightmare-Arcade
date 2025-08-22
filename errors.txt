@@ -2,21 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1: expected statement.
-    from alan import *
-                     ^
+The label prologue is defined twice, at
+  File "game/prologue.rpy", line 1 and
+  File "game/scripts/prologue.rpyc", line 1.
 
-File "game/script.rpy", line 2: expected statement.
-    from serra import *
-                      ^
+The label start is defined twice, at
+  File "game/script.rpy", line 1 and
+  File "game/scripts/script.rpyc", line 1.
 
-File "game/script.rpy", line 3: expected statement.
-    from klein import *
-                      ^
-
-File "game/script.rpy", line 4: expected statement.
-    from loc import *
-                    ^
-
-Ren'Py Version: Ren'Py 8.4.1.25072401
-Sat Aug  9 21:48:43 2025
+Ren'Py Version: Ren'Py 7.4.4.1439
+Fri Aug 22 17:05:11 2025
