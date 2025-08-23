@@ -69,3 +69,23 @@ init -1 python:
         if renpy.has_image(image_name):
             renpy.hide(image_name)
             renpy.with_statement(moveoutright)
+
+    #play music for a certain period of time
+    def fade_to_black_and_play_sfx(sfx_name, fadeout_bgm=0.5, black_trans=fade):
+        """
+        Stops BGM, fades/cuts to black, plays a one-shot SFX on the 'sound' channel,
+        and waits until it finishes.
+        """
+        # Stop background music
+        renpy.music.stop(channel="music", fadeout=fadeout_bgm)
+
+        # Go to black background
+        renpy.scene()
+        renpy.show("black")  # Ren'Py has a built-in 'black' Solid
+        if black_trans:
+            renpy.with_statement(black_trans)
+
+        # Play SFX on 'sound' channel (non-looping) and wait for it to end
+        renpy.music.play(sfx_name, channel="sound", loop=False, synchro_start=True)
+        while renpy.music.get_playing(channel="sound"):
+            renpy.pause(0.1)

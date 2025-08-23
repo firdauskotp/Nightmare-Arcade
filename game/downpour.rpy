@@ -24,11 +24,13 @@ label downpour:
     na " He shouted as tears began pouring out of his eyes. The downpour did well to cover up his tears. As he was riding"
     $ set_scene("alanaccident")
     b "Wrong lane! There is a car there!!!"
-    na "He did not manage to hear of their warning."
+    na "He did not manage to hear their warning."
 
-    $ stop_music()
-    $ play_music(accident)
-    $ stop_music()
+    # One-liner that does: stop BGM → fade to black → play accident → wait until done
+    $ fade_to_black_and_play_sfx(accident)
+
+    # (Continue the scene after the sound finishes…)
+    na "Everything turns black."
 
     $ set_scene("black")
 
