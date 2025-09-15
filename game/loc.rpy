@@ -8,3 +8,8 @@ image viewinginsta = im.Scale("locations/viewinginsta.png",1280, 720)
 image alanonbike = im.Scale("locations/alanonbike.png",1280, 720)
 image alanaccident = im.Scale("locations/alanaccident.png",1280, 720)
 image black = im.Scale("locations/black.jpg",1280, 720)
+image arcadehallway = im.Scale("locations/arcadehallway.PNG",1280, 720)
+image arcadebench = im.Scale("locations/arcadebench.PNG",1280, 720)
+image flashback1 = im.Scale("locations/flashback1.PNG",1280, 720)
+image alanfall = im.Scale("locations/alanfall.PNG",1280, 720)
+

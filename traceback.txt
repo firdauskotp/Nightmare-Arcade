@@ -1,78 +1,50 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Scale' <'Image' u'locations/flyover.png'> 1920 1080 True>:
-  File "game/downpour.rpy", line 2, in script
-    $ set_scene("flyover")
-  File "game/downpour.rpy", line 2, in <module>
-    $ set_scene("flyover")
-  File "game/helpers.rpy", line 11, in set_scene
-    renpy.with_statement(trans)
-Exception: Could not load image u'locations/flyover.png': error('Unsupported image format',)
+While running game code:
+  File "game/meetingserra.rpy", line 18, in script
+    $ fade_to_black_and_play_sfx('thud')
+  File "game/meetingserra.rpy", line 18, in <module>
+    $ fade_to_black_and_play_sfx('thud')
+  File "game/helpers.rpy", line 91, in fade_to_black_and_play_sfx
+    renpy.pause(0.1)
+IOError: Couldn't find file 'thud'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/downpour.rpy", line 2, in script
-    $ set_scene("flyover")
+  File "game/meetingserra.rpy", line 18, in script
+    $ fade_to_black_and_play_sfx('thud')
   File "renpy/ast.py", line 922, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "renpy/python.py", line 2218, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/downpour.rpy", line 2, in <module>
-    $ set_scene("flyover")
-  File "game/helpers.rpy", line 11, in set_scene
-    renpy.with_statement(trans)
-  File "renpy/exports.py", line 1646, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "renpy/display/core.py", line 2610, in do_with
-    clear=clear)
+  File "game/meetingserra.rpy", line 18, in <module>
+    $ fade_to_black_and_play_sfx('thud')
+  File "game/helpers.rpy", line 91, in fade_to_black_and_play_sfx
+    renpy.pause(0.1)
+  File "renpy/exports.py", line 1525, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay)
+  File "renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "renpy/display/core.py", line 3101, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3611, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "renpy/display/core.py", line 2441, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 777, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/transition.py", line 368, in render
-    top = render(self.new_widget, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 777, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 777, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/transform.py", line 933, in render
-    return transform_render(self, width, height, st, at)
-  File "accelerator.pyx", line 116, in renpy.display.accelerator.transform_render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/image.py", line 501, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "renpy/display/image.py", line 307, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/im.py", line 607, in render
-    return cache.get(self, render=True)
-  File "renpy/display/im.py", line 271, in get
-    surf = image.load()
-  File "renpy/display/im.py", line 858, in load
-    child = cache.get(self.image)
-  File "renpy/display/im.py", line 271, in get
-    surf = image.load()
-  File "renpy/display/im.py", line 688, in load
-    raise e
-Exception: Could not load image u'locations/flyover.png': error('Unsupported image format',)
+  File "renpy/display/core.py", line 3794, in interact_core
+    renpy.audio.audio.periodic()
+  File "renpy/audio/audio.py", line 1101, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "renpy/audio/audio.py", line 1079, in periodic_thread_main
+    periodic_pass()
+  File "renpy/audio/audio.py", line 1021, in periodic_pass
+    c.periodic()
+  File "renpy/audio/audio.py", line 487, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "renpy/audio/audio.py", line 69, in load
+    rv = renpy.loader.load(fn)
+  File "renpy/loader.py", line 798, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'thud'.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.4.1439
 Arcade Nightmare 1.0
-Fri Aug 22 20:02:05 2025
+Mon Sep 15 09:35:18 2025

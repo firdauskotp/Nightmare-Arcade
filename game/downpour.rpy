@@ -20,8 +20,8 @@ label downpour:
     a "I don’t care!"
 
     na "He speeds off, mind reeling. He isn’t thinking nor riding straight."
-    a "No, no, no, no, no!"
-    na " He shouted as tears began pouring out of his eyes. The downpour did well to cover up his tears. As he was riding"
+    a "No, no, no, no, no!!!"
+    na "The downpour did well to cover his tears. He didn't realise..."
     $ set_scene("alanaccident")
     b "Wrong lane! There is a car there!!!"
     na "He did not manage to hear their warning."
@@ -30,7 +30,6 @@ label downpour:
     $ fade_to_black_and_play_sfx(accident)
 
     # (Continue the scene after the sound finishes…)
-    na "Everything turns black."
 
     $ set_scene("black")
 

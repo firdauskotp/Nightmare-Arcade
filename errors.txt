@@ -2,13 +2,7 @@
 errors listed below, and try again.
 
 
-The label prologue is defined twice, at
-  File "game/prologue.rpy", line 1 and
-  File "game/scripts/prologue.rpyc", line 1.
-
-The label start is defined twice, at
-  File "game/script.rpy", line 1 and
-  File "game/scripts/script.rpyc", line 1.
+File "game/meetingserra.rpy", line 10: Tab characters are not allowed in Ren'Py scripts.
 
 Ren'Py Version: Ren'Py 7.4.4.1439
-Fri Aug 22 17:05:11 2025
+Mon Sep 15 09:31:35 2025
